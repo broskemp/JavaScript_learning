@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    if (confirm('Should I calculate the square root?') == true) {
+      const number = parseFloat(prompt('Enter a number for me to calculate.'));
+      if (number > 0) {
+        const answer = Math.sqrt(number);
+        document.write('Square root of ' + number + ' is ' + answer);
+      } else if (number === 0) {
+        document.write('You cannot calculate the square root of 0.')
+      } else {
+        document.write('You cannot calculate the square root of a negative number.')
+      }
+    } else {
+      document.write('The square root is not calculated.')
+    }
+</script>
+</body>
+</html>

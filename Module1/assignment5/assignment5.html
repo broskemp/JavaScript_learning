@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const leapyear = prompt('Enter a year.');
+    if (leapyear % 400 === 0) {
+      document.write(leapyear + ' is a leap year.');
+    } else if (leapyear % 100 === 0) {
+      document.write(leapyear + ' is not a leap year.');
+    } else if (leapyear % 4 === 0) {
+      document.write(leapyear + ' is a leap year.');
+    } else {
+      document.write(leapyear + ' is not a leap year.');
+    }
+
+</script>
+</body>
+</html>
