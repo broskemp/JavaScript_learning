@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function is_leap_year(year) {
+      return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+
+    function print_leap_years() {
+      let start_year = parseInt(prompt('Enter the starting year: '));
+      let end_year = parseInt(prompt('Enter the end year: '));
+
+      let list = document.createElement('ul');
+
+      for (let year = start_year; year <= end_year; year++) {
+        if (is_leap_year(year)) {
+          let list_item = document.createElement('li');
+          list_item.textContent = year;
+          list.appendChild(list_item);
+        }
+      }
+      document.body.appendChild(list);
+    }
+    print_leap_years();
+</script>
+</body>
+</html>

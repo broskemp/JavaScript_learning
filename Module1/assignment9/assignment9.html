@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+const primenumber = parseInt(prompt('Enter a number to see if it is a prime number.'));
+let is_prime = true;
+
+if (primenumber <= 1) {
+  is_prime= false;
+} else  {
+  for (let i = 2; i <= Math.sqrt(primenumber); i++ ) {
+    if (primenumber % i === 0) {
+        is_prime = false;
+        break;
+}}}
+
+let result = is_prime ? primenumber + ' is a prime number!' : primenumber + ' is not a prime number.';
+document.write(result)
+
+</script>
+</body>
+</html>
