@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol id="people"></ol>
+<script>
+  // how many participants
+    let participant_number = parseInt(prompt('How many participants will there be?'));
+  // name of participants
+    participants = [];
+    for (let i = 0; i < participant_number ; i++ ) {
+      participants.push(prompt('Insert a name for participant number ' + (i + 1)));
+    }
+    participants.sort();
+
+    let html = '';
+    for (let i = 0; i < participants.length; i++) {
+      html += '<li>' + participants[i] + '</li>';
+    }
+    document.getElementById('people').innerHTML = html;
+</script>
+</body>
+</html>
