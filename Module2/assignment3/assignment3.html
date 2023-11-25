@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id ="puppies"></ul>
+<script>
+    dogs = [];
+    for (let i = 0; i < 6 ; i++ ) {
+      dogs.push(prompt('Insert a name for dog number ' + (i + 1)));
+    }
+    dogs.sort();
+    dogs.reverse();
+
+        let html = '';
+    for (let i = 0; i < dogs.length; i++) {
+      html += '<li>' + dogs[i] + '</li>';
+    }
+    document.getElementById('puppies').innerHTML = html;
+</script>
+</body>
+</html>
