@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const numbers = [];
+    while (true) {
+   let number = parseFloat(prompt('Enter a number, if you enter the same number as before I will stop asking.'));
+   if (numbers.includes(number) === true) {
+     alert('You have given me the same number as you have entered before. Ending program, results are in console.')
+     break;
+   } else {
+     numbers.push(number)
+   }}
+numbers.sort((a,b) => a-b);
+    console.log("Sorted numbers (in ascending order): ", numbers)
+</script>
+</body>
+</html>

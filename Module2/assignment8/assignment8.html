@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let names = ['Johnny', 'DeeDee', 'Joey', 'Marky'];
+
+    function concat(arr, separator = '') {
+      let result = '';
+      for(let i = 0; i < arr.length; i++) {
+        if (result) {
+          result += separator;
+        }
+        result += arr[i];
+      }
+      return result;
+    }
+
+    document.write(concat(names, ''))
+</script>
+</body>
+</html>

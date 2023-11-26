@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id ="dice_rolls"></ul>
+<script>
+  dice_rolls = [];
+
+    let dice = {
+  sides: 6,
+  roll: function () {
+    let randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+while (true) {
+   let result = dice.roll();
+   if (result === 6) {
+     alert('6 has been achieved. Printing out all the rolls that were not a 6.');
+     break;
+   } else {
+     dice_rolls.push(result);
+   }
+}
+
+dice_rolls.sort((a,b) => a-b);
+    let html = '';
+    for (let i = 0; i < dice_rolls.length; i++) {
+      html += '<li>' + dice_rolls[i] + '</li>';
+    }
+    document.getElementById('dice_rolls').innerHTML = html;
+
+</script>
+</body>
+</html>
