@@ -1,10 +1,22 @@
+function UserChoice(){
+  let choice = document.getElementById('operation').value;
+  if (choice === "add"){
+    Addition();
+  } else if (choice === "sub"){
+    Subtraction();
+  } else if (choice === "multi"){
+    Multiplication();
+  } else if (choice === "div"){
+    Division();
+}}
+
 function Addition() {
   let number1 = parseFloat(document.getElementById('num1').value);
   let number2 = parseFloat(document.getElementById('num2').value);
 
   let answer = number1 + number2
   let result = document.getElementById('result')
-  result.p = answer
+  result.innerHTML = answer
 }
 
 function Subtraction() {
@@ -13,7 +25,7 @@ function Subtraction() {
 
   let answer = number1 - number2
   let result = document.getElementById('result')
-  result.p = answer
+  result.innerHTML = answer
 }
 
 function Multiplication() {
@@ -22,7 +34,7 @@ function Multiplication() {
 
   let answer = number1 * number2
   let result = document.getElementById('result')
-  result.p = answer
+  result.innerHTML = answer
 }
 
 function Division() {
@@ -35,6 +47,8 @@ function Division() {
         }
   let answer = number1 / number2
   let result = document.getElementById('result')
-  result.p = answer
+  result.innerHTML = answer
 }
 
+let button = document.querySelector('button')
+button.onclick = UserChoice
